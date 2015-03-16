@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  speaker_state: MyString
+  speaker_first: MyString
+  speaker_last: MyString
+  speaker_party: MyString
+  speaking: MyText
+
+two:
+  speaker_state: MyString
+  speaker_first: MyString
+  speaker_last: MyString
+  speaker_party: MyString
+  speaking: MyText

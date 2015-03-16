@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Speaker state:</strong>
+  <%= @post.speaker_state %>
+</p>
+
+<p>
+  <strong>Speaker first:</strong>
+  <%= @post.speaker_first %>
+</p>
+
+<p>
+  <strong>Speaker last:</strong>
+  <%= @post.speaker_last %>
+</p>
+
+<p>
+  <strong>Speaker party:</strong>
+  <%= @post.speaker_party %>
+</p>
+
+<p>
+  <strong>Speaking:</strong>
+  <%= @post.speaking %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
