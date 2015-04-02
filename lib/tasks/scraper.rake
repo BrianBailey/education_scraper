@@ -6,24 +6,25 @@ namespace :scraper do
 
 
 # Set API token and URL
-apikey = ""
+apikey = "8afe89c570dc484591ba42c38931b2b0"
 
 # http://polling.3taps.com/poll
 polling_url = "http://capitolwords.org/api/1/text.json"
 
 #http://capitolwords.org/api/1/text.json?phrase=education&state=MO&page=1&apikey=8afe89c570dc484591ba42c38931b2b0
+# Grab data until up-to-date
+# Loop do 
 
+					# Specify request parameters
+					params = {
 
-# Specify request parameters
-params = {
+							phrase: "education",
+							state: "MO",
+							per_page: 1168,  
 
-		phrase: "education",
-		state: "MO",
-		page: "10",
-
-		apikey: apikey
-	
-}
+							apikey: apikey
+						
+					}
 
 # Prepare API request
 uri = URI.parse(polling_url)
@@ -69,12 +70,22 @@ result = JSON.parse(open(uri).read)
   			
   			@post.speaker_raw = posting["speaker_raw"]
 
-				
+
+
+# QueryExec.run('select * from users') # gives all the users from users table
+
+# QueryExec.run('update users set name='xxx' where id=2')  # updates user with name='xxx' which is having id 2.
+
+# Using this gem we can do all the SQL operatons.
 
 
  				# Save Post
 				@post.save
 	end
+# end
+	# num_found.first.update(value: result["num_found"])
+	# break if result["results"].empty?
+
 end
 
 # require "open-uri"

@@ -1,11 +1,42 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def home
+  end
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.paginate(:page =>params[:page], :per_page => 50)
+     @posts = Post.all.paginate(:page =>params[:page], :per_page => 50)
+     @posts = @posts.where(speaker_party: params["speaker_party"]) if params["speaker_party"].present?
+     @posts = @posts.where(speaker_state: params["speaker_state"]) if params["speaker_state"].present?
+
+     @posts = @posts.where(speaker_last: params["speaker_last"]) if params["speaker_last"].present?
+
+     @posts = @posts.where(speaking: params["speaking"]) if params["speaking"].present?
+      
+      @posts = @posts.where(chamber: params["chamber"]) if params["chamber"].present?
+      
+      @posts = @posts.where(title: params["title"]) if params["title"].present?
+      
+      @posts = @posts.where(date: params["date"]) if params["date"].present?
+      
+      @posts = @posts.where(origin_url: params["origin_url"]) if params["origin_url"].present?
+      
+      @posts = @posts.where(number: params["number"]) if params["number"].present?
+      
+      @posts = @posts.where(order: params["order"]) if params["order"].present?
+      
+      
+      @posts = @posts.where(volume: params["volume"]) if params["volume"].present?
+      
+      @posts = @posts.where(pages: params["pages"]) if params["pages"].present?
+
+      @posts = @posts.where(bioguide_id: params["bioguide_id"]) if params["bioguide_id"].present?
+
+      @posts = @posts.where(speaker_raw: params["speaker_raw"]) if params["speaker_raw"].present?
+
   end
+
 
   # GET /posts/1
   # GET /posts/1.json

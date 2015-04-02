@@ -1,0 +1,184 @@
+<div class="filter">
+    <%= form_tag posts_path, method: :get, class: "form-inline" do %>
+      <div class="row">
+            <div class="row">
+                    <div class="col-md-4">
+                        <%= label_tag "Speaker Party" %>
+                    </div>
+                    <div class="col-md-4">
+                        <%= label_tag "Speaker state" %>
+                    </div>
+                     <div class="col-md-4">
+                        <%= label_tag "Speaker Last" %>
+                    </div>
+            </div>
+
+                
+        <div class="row">
+                <div class="col-md-4">
+                      <%= text_field_tag :speaker_party, params[:speaker_party], placeholder: "minimum", class: "form-control input-sm" %>
+                </div>
+                
+                <div class="col-md-4">
+                      <%= text_field_tag :speaker_state, params[:speaker_state], class: "form-control input-sm" %>
+                </div>
+
+                <div class="col-md-4">
+
+                        <%= text_field_tag :speaker_last, params[:speaker_last], class: "form-control input-sm" %>
+
+        </div>
+      
+
+    </div>
+
+
+      <div class="row">
+              <div class="row">
+
+
+                    <div class="col-md-4">
+                      <%= label_tag "Speaking" %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <%= label_tag "Chamber" %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <%= label_tag "Title" %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <%= label_tag "Date" %>
+                    </div>
+              </div>
+                  <div class="row">
+
+                     <div class="col-md-4">
+                         <%= text_field_tag :speaking, params[:speaking] %>
+                      </div>
+
+                  
+
+                      <div class="col-md-4">
+                            <%= text_field_tag :chamber, params[:chamber], class: "form-control input-sm" %>
+                      </div>
+
+                  
+                      <div class="col-md-4">
+                            <%= text_field_tag :title, params[:title], class: "form-control input-sm" %>
+                      </div>
+
+                  
+                      <div class="col-md-4">
+                              <%= text_field_tag :date, params[:date], class: "form-control input-sm" %>
+                      </div>
+                </div>
+
+
+          </div>
+
+        <div class="row">
+                  <div class="row">
+
+                        <div class="col-md-4">
+                            <%= label_tag "Origin url" %>
+                        </div>
+                  </div>
+
+                  <div class="row">
+                        <div class="col-md-4">
+                            <%= text_field_tag :origin_url, params[:origin_url], class: "form-control input-sm" %>
+                        </div>
+                  </div>
+
+        </div>
+
+        
+        <div class="row">
+              <div class="row">
+
+                  <div class="col-md-4">
+                      <%= label_tag "Number" %>
+                  </div>
+
+                  <div class="col-md-4">
+                        <%= label_tag "Order" %>
+                  </div>
+
+                  <div class="col-md-4">
+                        <%= label_tag "Volume" %>
+                  </div>
+
+                  <div class="col-md-4">
+                        <%= label_tag "Pages" %>
+                  </div>
+                <div>
+
+            <div class="row">
+                          <div class="col-md-4">
+                            <%= text_field_tag :number, params[:number], class: "form-control input-sm" %>
+                          </div>
+
+          
+                  
+                          <div class="col-md-4">
+                             <%= text_field_tag :order, params[:order], class: "form-control input-sm" %>
+                          </div>
+
+                  
+                          <div class="col-md-4">
+                              <%= text_field_tag :volume, params[:volume], class: "form-control input-sm" %>
+                          </div>
+
+                  
+                          <div class="col-md-4">
+                              <%= text_field_tag :pages, params[:pages], class: "form-control input-sm" %>
+                          </div>
+             </div>
+
+
+        </div>
+
+        
+        <div class="row">
+            <div class="row">
+                <div class="col-md-4">
+                    <%= label_tag "Bioguide_id" %>
+                </div>
+               <div class="col-md-4">
+                  <%= label_tag "Speaker raw" %>
+              </div>
+
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                      <%= text_field_tag :bioguide_id, params[:bioguide_id], class: "form-control input-sm" %>
+                    </div>
+
+              
+                    <div class="col-md-4">
+                       <%= text_field_tag :speaker_raw, params[:speaker_raw], class: "form-control input-sm" %>
+                    </div>
+          </div>
+
+      </div>
+
+
+
+
+   
+
+
+    <div class="col-md-2">
+      <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+    </div>
+  </div>
+
+    <% end %>
+
+</div>
+ 
+
+  
